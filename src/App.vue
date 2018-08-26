@@ -11,47 +11,74 @@
     <!-- </p> -->
     <!-- 路由出口 -->
     <!-- 路由匹配到的组件将渲染在这里 -->
-    <div class="proj-list" v-for="(proj, index) in projs" :key="index" >
+    <!-- <div class="proj-list" v-for="(proj, index) in projs" :key="index" >
       <router-link class="title-link" :to=proj.path>{{proj.title}}</router-link>
-    </div>
-    
-    <router-view></router-view>
+    </div> -->
+    <!-- <div class="tabs">
+      <ul>
+        <li>
+          <router-link :to="{ name : 'Home' }" tag="li">
+            <div><img src="/assets/images/home.svg"></div>
+            <div>首页</div>
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{ name : 'Categories' }" tag="li">
+            <div><img src="/assets/images/category.svg"></div>
+            <div>分类</div>
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{ name : 'ShoppingCart' }" tag="li">
+            <div><img src="/assets/images/cart.svg"></div>
+            <div>购物车</div>
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{ name : 'Me' }" tag="li">
+            <div><img src="/assets/images/me.svg"></div>
+            <div>我</div>
+          </router-link>
+        </li>
+      </ul>
+    </div> -->
+    <!-- <div class="content"> -->
+      <router-view></router-view>
+    <!-- </div> -->
   </div>
 </template>
 
-<script>
-  import {
-    Button
-  } from 'mand-mobile';
+<script type="text/ecmascript-6">
+  import "./assets/less/site.less"
   export default {
     name: 'app',
     data() {
       return {
-        projs: [{
-          title: '朵朵日记',
-          path: '/todo'
-        },{
-          title: '朵朵图书馆',
-          path: '/library'
-        }],
-        paths: [{
-            title: 'Go to world',
-            path: '/hello/vue'
-          },
-          {
-            title: 'Go to vue',
-            path: '/vue'
-          }
-        ]
+        // projs: [{
+        //   title: '朵朵日记',
+        //   path: '/todo'
+        // },{
+        //   title: '朵朵图书馆',
+        //   path: '/library'
+        // }],
+        // paths: [{
+        //     title: 'Go to world',
+        //     path: '/hello/vue'
+        //   },
+        //   {
+        //     title: 'Go to vue',
+        //     path: '/vue'
+        //   }
+        // ]
       }
     },
-    components: {
-      [Button.name]: Button
-    },
+    // components: {
+    //   [Button.name]: Button
+    // },
     methods: {
-      goWorld(item) {
-        this.$router.push(item.path)
-      }
+      // goWorld(item) {
+      //   this.$router.push(item.path)
+      // }
     }
   }
 </script>
@@ -66,7 +93,7 @@
     margin-top: 60px;
   }
 
-  .proj-list {
+  /* .proj-list {
     flex-direction: column;
   }
   
@@ -74,5 +101,5 @@
     text-decoration-line: none;
     color: #2c3e50;
     font-size: 24px;
-  }
+  } */
 </style>
